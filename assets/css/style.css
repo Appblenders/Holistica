@@ -6895,7 +6895,7 @@ h2.card-middle-avatar:hover>a {
 }
 
 a.btn.add-links:hover {
-    background: #00d3c7
+    /* background: #00d3c7; */
 }
 
 .breadcrumb-item a:hover {
@@ -19185,7 +19185,8 @@ h2.card-middle-avatar:hover>a {
 }
 
 a.btn.add-links:hover {
-    background: #00d3c7
+    background: #00d3c7;
+    color: white;
 }
 
 .breadcrumb-item a:hover {
@@ -19895,7 +19896,7 @@ a.btn.add-links:hover {
 
 .setting-form-blk .local-forms label {
     font-size: 12px;
-    color: rgba(51,52,72,.5)
+    color: rgb(51 52 72);
 }
 
 .setting-form-blk .local-forms .form-control::placeholder {
@@ -23256,7 +23257,7 @@ form .btn-secondary {
 
 .add-links {
     background-color: #2e37a4;
-    color: #fff!important;
+    /* color: #fff!important; */
     font-size: 13px;
     font-weight: 700;
     padding: 10px 26px;

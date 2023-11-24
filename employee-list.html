@@ -9,9 +9,8 @@
 <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
 <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
-<link rel="stylesheet" type="text/css" href="assets/css/select2.min.css">
 
-<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
 
 <link rel="stylesheet" href="assets/plugins/feather/feather.css">
 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -27,6 +26,10 @@
 <a id="toggle_btn" href="javascript:void(0);"><img src="assets/img/icons/bar-icon.svg" alt></a>
 <a id="mobile_btn" class="mobile_btn float-start" href="#sidebar"><img src="assets/img/icons/bar-icon.svg" alt></a>
 <div class="top-nav-search mob-view">
+<form>
+<input type="text" class="form-control" placeholder="Search here">
+<a class="btn"><img src="assets/img/icons/search-normal.svg" alt></a>
+</form>
 </div>
 <ul class="nav user-menu float-end">
 <li class="nav-item dropdown d-none d-md-block">
@@ -152,7 +155,7 @@
     
     <li>
     
-    <a class="active" href="patients.html"><span class="menu-side"><img src="assets/img/icons/menu-icon-08.svg" alt></span> <span>Patients </span> </a>
+    <a  href="patients.html"><span class="menu-side"><img src="assets/img/icons/menu-icon-08.svg" alt></span> <span>Patients </span> </a>
     
     </li>
     <li>
@@ -194,7 +197,7 @@
         </li>
     
     <li>
-<a href="employee-list.html"><span class="menu-side"><img src="assets/img/icons/menu-icon-08.svg" alt></span> <span> Employee/HR </span></a>
+<a class="active" href="employee-list.html"><span class="menu-side"><img src="assets/img/icons/menu-icon-08.svg" alt></span> <span> Employee/HR </span></a>
 </li>
     
   
@@ -212,9 +215,28 @@
 <div class="row">
 <div class="col-sm-12">
 <ul class="breadcrumb">
-<li class="breadcrumb-item"><a href="patients.html">Patients </a></li>
+<li class="breadcrumb-item"><a href="index-2.html">Dashboard </a></li>
 <li class="breadcrumb-item"><i class="feather-chevron-right"></i></li>
-<li class="breadcrumb-item active">Edit Patient</li>
+<li class="breadcrumb-item active">Employee List</li>
+<div class="col-auto text-end float-end ms-auto download-grp">
+    <div class="btn-group">
+        <button type="button" class="btn btn-success btn-lg dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-right: 5px;">Filter</button>
+        <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">This Month</a>
+        <a class="dropdown-item" href="#">Receptionist</a>
+        <a class="dropdown-item" href="#">Custom</a>
+        </div>
+      
+            <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Convert to Patient</a>
+                <a class="dropdown-item" href="#">Assign to</a>
+                <a class="dropdown-item" href="#">Send WhatsApp</a>
+                <a class="dropdown-item" href="#">Send Email</a>
+        </div>
+     
+</div>
+</div>
 </ul>
 </div>
 </div>
@@ -222,177 +244,177 @@
 
 <div class="row">
 <div class="col-sm-12">
-<div class="card">
+<div class="card card-table show-entire">
 <div class="card-body">
-    <form>
-        <div class="row">
-        <div class="col-12">
-        <div class="form-heading">
-        <h4> Edit Patients</h4>
-        </div>
-        </div>
-        <div class="col-12 col-md-6 col-xl-4">
-            <div class="form-group local-forms">
-            <label>Patient Id <span class="login-danger">*</span></label>
-            <input class="form-control" type="text" placeholder value="HW100001" disabled>
-            </div>    
-        </div>
-        <div class="col-12 col-md-6 col-xl-8">
-        <div class="form-group local-forms">
-        <label>Full Name <span class="login-danger">*</span></label>
-        <input class="form-control" type="text" placeholder value="Manav Shah">
-        </div>
-        </div>
-        <div class="col-12 col-md-6 col-xl-4">
-        <div class="form-group local-forms">
-        <label>Mobile (WhatsApp)<span class="login-danger">*</span></label>
-        <input class="form-control" type="text" placeholder value="9898989898">
-        </div>
-        </div>
-        <div class="col-12 col-md-6 col-xl-4">
-        <div class="form-group local-forms">
-        <label>Email <span class="login-danger">*</span></label>
-        <input class="form-control" type="email" placeholder value="manavshah@gmail.com">
-        </div>
-        </div>
-        <div class="col-12 col-md-6 col-xl-4">
-            <div class="form-group local-forms cal-icon">
-            <label>Date Of Birth <span class="login-danger">*</span></label>
-            <input class="form-control datetimepicker" type="text" value="01/01/1990">
-            </div>
-        </div>
-        <div class="col-12 col-md-6 col-xl-4">
-            <div class="form-group local-forms">
-            <label>Gender <span class="login-danger">*</span></label>
-            <select class="form-control select">
-            <option>Select Gender </option>
-            <option selected>Male</option>
-            <option>Female</option>
-        
-            </select>
-            </div>
-        </div>
 
-        <div class="col-12 col-md-6 col-xl-4">
-            <div class="form-group local-forms">
-            <label>City <span class="login-danger">*</span></label>
-            <select class="form-control select">
-            <option>Select City</option>
-            <option selected>Ahmedabad</option>
-            <option>Surat</option>
-            </select>
-            </div>
-            </div>
-            
-            <div class="col-12 col-md-6 col-xl-4">
-            <div class="form-group local-forms">
-            <label>State<span class="login-danger">*</span></label>
-            <select class="form-control select">
-            <option>Select State</option>
-            <option selected>Gujarat</option>
-            <option>Maharastra</option>
-            </select>
-            </div>
-            </div>
-        <div class="col-12 col-md-6 col-xl-4">
-            <div class="form-group local-forms">
-            <label>Inquiry For Which Disease <span class="login-danger">*</span></label>
-            <select class="form-control select">
-            <option>Select Disease</option>
-            <option selected>Depression</option>
-            <option>PCOS</option>
-            <option>Diabetes</option>
-            <option>Arthritis</option>
-            <option>Heart Disease</option>
-            <option>Migraine</option>
-            <option>Hypertension</option>
-            <option>Migraine</option>
-            </select>
-            </div>
-        </div>
+<div class="page-table-header mb-2">
+<div class="row align-items-center">
+<div class="col">
+<div class="doctor-table-blk">
+<h3>Employee List</h3>
+<div class="doctor-search-blk">
+<div class="top-nav-search table-search-blk">
+<form>
+<input type="text" class="form-control" placeholder="Search here">
+<a class="btn"><img src="assets/img/icons/search-normal.svg" alt></a>
+</form>
+</div>
 
-        <div class="col-12 col-md-6 col-xl-8">
-            <div class="form-group local-forms">
-            <label>Medical history (optional)<span class="login-danger"></span></label>
-            <input class="form-control" type="text" placeholder value="Diabetes Since last 10 Years">
+</div>
+</div>
+</div>
+<div class="col-auto text-end float-end ms-auto download-grp">
+    <div class="add-group">
+
+        <div class="col-lg-4 col-md-4">
+            <div class="invoices-settings-btn">
+            <a href="add-employee.html" class="btn">
+            <i data-feather="plus-circle"></i> Create New
+            </a>
             </div>
-            </div>
-        <div class="col-12 col-md-6 col-xl-4">
-            <div class="form-group local-forms">
-            <label>Source of Referral <span class="login-danger">*</span></label>
-            <select class="form-control select">
-            <option>Select Source </option>
-            <option selected>Social Media</option>
-            <option>Friends/Family</option>
-            <option>News</option>
-            </select>
             </div>
         </div>
-        
-        
-            <div class="col-12 col-md-6 col-xl-4">
-                <div class="form-group local-forms">
-                <label>Assigned Doctor <span class="login-danger">*</span></label>
-                <select class="form-control select">
-                <option>Select Doctor</option>
-                <option selected>Dr. Dharmesh Shah</option>
-                <option>Dr. Manav Shah</option>
-                <option>Dr. Dharmesh Shah</option>
-                <option>Dr. Manav Shah</option>
-                </select>
-                </div>
-                </div>
-                <div class="col-12 col-md-6 col-xl-4">
-                    <div class="form-group local-forms">
-                    <label>Patient Channel <span class="login-danger">*</span></label>
-                    <select class="form-control select">
-                    <option>Select Channel</option>
-                    <option selected>Online</option>
-                    <option>Offline</option>
-                    </select>
-                    </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-xl-4">
-                        <div class="form-group local-forms">
-                        <label>Treatment Level <span class="login-danger">*</span></label>
-                        <select class="form-control select">
-                        <option>Select Stage</option>
-                        <option selected>Level 2</option>
-                        <option>Level 3</option>
-                        <option>Level 4</option>
-                        <option>Level 5</option>
-                        </select>
-                        </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-xl-4">
-                            <div class="form-group local-forms">
-                            <label>Receptionist <span class="login-danger">*</span></label>
-                            <select class="form-control select">
-                            <option>Select Receptionist</option>
-                            <option selected>Employee 1</option>
-                            <option>Employee 2</option>
-                            </select>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-xl-4">
-                            <div class="form-group local-forms">
-                            <label>Source Of Inquiry <span class="login-danger">*</span></label>
-                            <select class="form-control select">
-                            <option>Select Source</option>
-                            <option selected>Walk-in</option>
-                            <option>Online</option>
-                            </select>
-                            </div>
-                            </div>
-        </form>
-        <div class="col-12">
-            <div class="doctor-submit text-end">
-            <button type="submit" class="btn btn-primary submit-form me-2">Submit</button>
-            <button type="submit" class="btn btn-primary cancel-form">Cancel</button>
-            </div>
-            </div>
-            </div>
-            </form>
+</div>
+</div>
+</div>
+
+<div class="table-responsive">
+<table class="table border-0 custom-table comman-table datatable mb-0">
+<thead>
+<tr>
+<th>
+<div class="form-check check-tables">
+<input class="form-check-input" type="checkbox" value="something">
+</div>
+</th>
+<th>Employee Name</th>
+<th>Department</th>
+<th>Designation</th>
+<th>Mobile</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<div class="form-check check-tables">
+<input class="form-check-input" type="checkbox" value="something">
+</div>
+</td>
+<td><a href="view-employee.html">Rahul Patel</a></td>
+<td>Ayurveda</td>
+<td>Consultant</td>
+<td>1234567891</td>
+<td>rahulpatel@gmail.com</td>
+</tr>
+<tr>
+<td>
+<div class="form-check check-tables">
+<input class="form-check-input" type="checkbox" value="something">
+</div>
+</td>
+<td><a href="view-employee.html">Rahul Patel</a></td>
+<td>Ayurveda</td>
+<td>Consultant</td>
+<td>1234567891</td>
+<td>rahulpatel@gmail.com</td>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="form-check check-tables">
+<input class="form-check-input" type="checkbox" value="something">
+</div>
+</td>
+<td><a href="view-employee.html">Rahul Patel</a></td>
+<td>Ayurveda</td>
+<td>Consultant</td>
+<td>1234567891</td>
+<td>rahulpatel@gmail.com</td>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="form-check check-tables">
+<input class="form-check-input" type="checkbox" value="something">
+</div>
+</td>
+<td><a href="view-employee.html">Rahul Patel</a></td>
+<td>Ayurveda</td>
+<td>Consultant</td>
+<td>1234567891</td>
+<td>rahulpatel@gmail.com</td>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="form-check check-tables">
+<input class="form-check-input" type="checkbox" value="something">
+</div>
+</td>
+<td><a href="view-employee.html">Rahul Patel</a></td>
+<td>Ayurveda</td>
+<td>Consultant</td>
+<td>1234567891</td>
+<td>rahulpatel@gmail.com</td>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="form-check check-tables">
+<input class="form-check-input" type="checkbox" value="something">
+</div>
+</td>
+<td><a href="view-employee.html">Rahul Patel</a></td>
+<td>Ayurveda</td>
+<td>Consultant</td>
+<td>1234567891</td>
+<td>rahulpatel@gmail.com</td>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="form-check check-tables">
+<input class="form-check-input" type="checkbox" value="something">
+</div>
+</td>
+<td><a href="view-employee.html">Rahul Patel</a></td>
+<td>Ayurveda</td>
+<td>Consultant</td>
+<td>1234567891</td>
+<td>rahulpatel@gmail.com</td>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="form-check check-tables">
+<input class="form-check-input" type="checkbox" value="something">
+</div>
+</td>
+<td><a href="view-employee.html">Rahul Patel</a></td>
+<td>Ayurveda</td>
+<td>Consultant</td>
+<td>1234567891</td>
+<td>rahulpatel@gmail.com</td>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -623,14 +645,12 @@
 </div>
 </div>
 <div class="sidebar-overlay" data-reff></div>
-<script src="assets/js/jquery-3.6.1.min.js"></script>
+<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-3.6.1.min.js"></script>
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/feather.min.js"></script>
 <script src="assets/js/jquery.slimscroll.js"></script>
-<script src="assets/js/select2.min.js"></script>
-
-<script src="assets/plugins/moment/moment.min.js"></script>
-<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+<script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="assets/plugins/datatables/datatables.min.js"></script>
 <script src="assets/js/app.js"></script>
 </body>
 </html>

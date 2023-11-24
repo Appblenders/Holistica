@@ -27,6 +27,10 @@
 <a id="toggle_btn" href="javascript:void(0);"><img src="assets/img/icons/bar-icon.svg" alt></a>
 <a id="mobile_btn" class="mobile_btn float-start" href="#sidebar"><img src="assets/img/icons/bar-icon.svg" alt></a>
 <div class="top-nav-search mob-view">
+<form>
+<input type="text" class="form-control" placeholder="Search here">
+<a class="btn"><img src="assets/img/icons/search-normal.svg" alt></a>
+</form>
 </div>
 <ul class="nav user-menu float-end">
 <li class="nav-item dropdown d-none d-md-block">
@@ -152,7 +156,7 @@
     
     <li>
     
-    <a class="active" href="patients.html"><span class="menu-side"><img src="assets/img/icons/menu-icon-08.svg" alt></span> <span>Patients </span> </a>
+    <a  href="patients.html"><span class="menu-side"><img src="assets/img/icons/menu-icon-08.svg" alt></span> <span>Patients </span> </a>
     
     </li>
     <li>
@@ -194,7 +198,7 @@
         </li>
     
     <li>
-<a href="employee-list.html"><span class="menu-side"><img src="assets/img/icons/menu-icon-08.svg" alt></span> <span> Employee/HR </span></a>
+<a class="active" href="employee-list.html"><span class="menu-side"><img src="assets/img/icons/menu-icon-08.svg" alt></span> <span> Employee/HR </span></a>
 </li>
     
   
@@ -212,9 +216,21 @@
 <div class="row">
 <div class="col-sm-12">
 <ul class="breadcrumb">
-<li class="breadcrumb-item"><a href="patients.html">Patients </a></li>
+<li class="breadcrumb-item"><a href="employee-list.html">Employee </a></li>
 <li class="breadcrumb-item"><i class="feather-chevron-right"></i></li>
-<li class="breadcrumb-item active">Edit Patient</li>
+<li class="breadcrumb-item active">Employee Profile</li>
+<div class="btn-group">
+    <a href="edit-employee.html">
+        <button type="button" class="btn btn-success btn-lg" style="margin-right: 10px;">Edit</button>
+      </a> 
+      <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-right: 10px;">Action</button>
+      <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Delete</a>
+          <a class="dropdown-item" href="#">Send WhatsApp</a>
+          <a class="dropdown-item" href="#">Send Email</a>
+  </div>     
+
+</div>
 </ul>
 </div>
 </div>
@@ -222,177 +238,233 @@
 
 <div class="row">
 <div class="col-sm-12">
-<div class="card">
-<div class="card-body">
-    <form>
+    <div class="card">
+        <div class="card-body">
+        <form>
         <div class="row">
         <div class="col-12">
         <div class="form-heading">
-        <h4> Edit Patients</h4>
+        <h4>Employee Details</h4>
         </div>
         </div>
         <div class="col-12 col-md-6 col-xl-4">
-            <div class="form-group local-forms">
-            <label>Patient Id <span class="login-danger">*</span></label>
-            <input class="form-control" type="text" placeholder value="HW100001" disabled>
-            </div>    
-        </div>
-        <div class="col-12 col-md-6 col-xl-8">
         <div class="form-group local-forms">
         <label>Full Name <span class="login-danger">*</span></label>
-        <input class="form-control" type="text" placeholder value="Manav Shah">
+        <input class="form-control" type="text" value="Rahul Patel">
         </div>
         </div>
+     
         <div class="col-12 col-md-6 col-xl-4">
         <div class="form-group local-forms">
-        <label>Mobile (WhatsApp)<span class="login-danger">*</span></label>
-        <input class="form-control" type="text" placeholder value="9898989898">
+        <label>Mobile <span class="login-danger">*</span></label>
+        <input class="form-control" type="text" value="1234567891">
         </div>
         </div>
         <div class="col-12 col-md-6 col-xl-4">
         <div class="form-group local-forms">
         <label>Email <span class="login-danger">*</span></label>
-        <input class="form-control" type="email" placeholder value="manavshah@gmail.com">
+        <input class="form-control" type="email" value="rahulpatel@gmail.com">
         </div>
         </div>
-        <div class="col-12 col-md-6 col-xl-4">
-            <div class="form-group local-forms cal-icon">
-            <label>Date Of Birth <span class="login-danger">*</span></label>
-            <input class="form-control datetimepicker" type="text" value="01/01/1990">
-            </div>
+  
+        <div class="col-12 col-md-6 col-xl-6">
+        <div class="form-group local-forms cal-icon">
+        <label>Date Of Birth <span class="login-danger">*</span></label>
+        <input class="form-control datetimepicker" type="text" value="01/01/2000">
         </div>
-        <div class="col-12 col-md-6 col-xl-4">
-            <div class="form-group local-forms">
-            <label>Gender <span class="login-danger">*</span></label>
-            <select class="form-control select">
-            <option>Select Gender </option>
-            <option selected>Male</option>
-            <option>Female</option>
-        
-            </select>
-            </div>
         </div>
-
-        <div class="col-12 col-md-6 col-xl-4">
-            <div class="form-group local-forms">
-            <label>City <span class="login-danger">*</span></label>
-            <select class="form-control select">
-            <option>Select City</option>
-            <option selected>Ahmedabad</option>
-            <option>Surat</option>
-            </select>
-            </div>
-            </div>
-            
-            <div class="col-12 col-md-6 col-xl-4">
-            <div class="form-group local-forms">
-            <label>State<span class="login-danger">*</span></label>
-            <select class="form-control select">
-            <option>Select State</option>
-            <option selected>Gujarat</option>
-            <option>Maharastra</option>
-            </select>
-            </div>
-            </div>
-        <div class="col-12 col-md-6 col-xl-4">
-            <div class="form-group local-forms">
-            <label>Inquiry For Which Disease <span class="login-danger">*</span></label>
-            <select class="form-control select">
-            <option>Select Disease</option>
-            <option selected>Depression</option>
-            <option>PCOS</option>
-            <option>Diabetes</option>
-            <option>Arthritis</option>
-            <option>Heart Disease</option>
-            <option>Migraine</option>
-            <option>Hypertension</option>
-            <option>Migraine</option>
-            </select>
-            </div>
-        </div>
-
-        <div class="col-12 col-md-6 col-xl-8">
-            <div class="form-group local-forms">
-            <label>Medical history (optional)<span class="login-danger"></span></label>
-            <input class="form-control" type="text" placeholder value="Diabetes Since last 10 Years">
-            </div>
-            </div>
-        <div class="col-12 col-md-6 col-xl-4">
-            <div class="form-group local-forms">
-            <label>Source of Referral <span class="login-danger">*</span></label>
-            <select class="form-control select">
-            <option>Select Source </option>
-            <option selected>Social Media</option>
-            <option>Friends/Family</option>
-            <option>News</option>
-            </select>
-            </div>
-        </div>
-        
-        
-            <div class="col-12 col-md-6 col-xl-4">
-                <div class="form-group local-forms">
-                <label>Assigned Doctor <span class="login-danger">*</span></label>
-                <select class="form-control select">
-                <option>Select Doctor</option>
-                <option selected>Dr. Dharmesh Shah</option>
-                <option>Dr. Manav Shah</option>
-                <option>Dr. Dharmesh Shah</option>
-                <option>Dr. Manav Shah</option>
-                </select>
+        <div class="col-12 col-md-6 col-xl-6">
+            <div class="form-group select-gender">
+                <label class="gen-label">Gender<span class="login-danger">*</span></label>
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                        <input type="radio" name="gender" class="form-check-input" checked> Male
+                    </label>
                 </div>
+                <div class="form-check-inline">
+                    <label class="form-check-label">
+                        <input type="radio" name="gender" class="form-check-input"> Female
+                    </label>
                 </div>
-                <div class="col-12 col-md-6 col-xl-4">
-                    <div class="form-group local-forms">
-                    <label>Patient Channel <span class="login-danger">*</span></label>
-                    <select class="form-control select">
-                    <option>Select Channel</option>
-                    <option selected>Online</option>
-                    <option>Offline</option>
-                    </select>
-                    </div>
-                    </div>
-                    <div class="col-12 col-md-6 col-xl-4">
-                        <div class="form-group local-forms">
-                        <label>Treatment Level <span class="login-danger">*</span></label>
-                        <select class="form-control select">
-                        <option>Select Stage</option>
-                        <option selected>Level 2</option>
-                        <option>Level 3</option>
-                        <option>Level 4</option>
-                        <option>Level 5</option>
-                        </select>
-                        </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-xl-4">
-                            <div class="form-group local-forms">
-                            <label>Receptionist <span class="login-danger">*</span></label>
-                            <select class="form-control select">
-                            <option>Select Receptionist</option>
-                            <option selected>Employee 1</option>
-                            <option>Employee 2</option>
-                            </select>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-xl-4">
-                            <div class="form-group local-forms">
-                            <label>Source Of Inquiry <span class="login-danger">*</span></label>
-                            <select class="form-control select">
-                            <option>Select Source</option>
-                            <option selected>Walk-in</option>
-                            <option>Online</option>
-                            </select>
-                            </div>
-                            </div>
+            </div>
+        </div>
+        
+   
+        <div class="col-12 col-md-6 col-xl-6">
+        <div class="form-group local-forms">
+        <label>Designation <span class="login-danger">*</span></label>
+        <input class="form-control" type="text" value="Consultant">
+        </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-6">
+        <div class="form-group local-forms">
+        <label>Department <span class="login-danger">*</span></label>
+        <select class="form-control select">
+        <option>Select Department</option>
+        <option selected>Ayurveda</option>
+        <option>Physio</option>
+        </select>
+        </div>
+        </div>
+        <div class="col-12 col-sm-12">
+        <div class="form-group local-forms">
+        <label>Address <span class="login-danger">*</span></label>
+        <textarea class="form-control" rows="3" cols="30">SAMVAAD Sonnet, near Tragad tunnel, Tragad, Gujarat, Ahmedabad</textarea>
+        </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3">
+        <div class="form-group local-forms">
+        <label>City <span class="login-danger">*</span></label>
+        <select class="form-control select">
+        <option>Select City</option>
+        <option>Ahmedabad</option>
+        <option selected>Surat</option>
+        </select>
+        </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3">
+        <div class="form-group local-forms">
+        <label>Country <span class="login-danger">*</span></label>
+        <select class="form-control select">
+        <option>Select Country </option>
+        <option selected>India</option>
+        <option>Uk</option>
+        <option>Italy</option>
+        </select>
+        </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3">
+        <div class="form-group local-forms">
+        <label>State/Province <span class="login-danger">*</span></label>
+        <select class="form-control select">
+        <option>Select State</option>
+        <option selected>Gujarat</option>
+        <option>Rajasthan</option>
+        </select>
+        </div>
+        </div>
+        <div class="col-12 col-md-6 col-xl-3">
+        <div class="form-group local-forms">
+        <label>Postal Code <span class="login-danger">*</span></label>
+        <input class="form-control" type="text" value="382421">
+        </div>
+        </div>
+  
+        <div class="col-12 col-md-6 col-xl-6">
+        <div class="form-group select-gender">
+        <label class="gen-label">Status <span class="login-danger">*</span></label>
+        <div class="form-check-inline">
+        <label class="form-check-label">
+        <input type="radio" name="gender" class="form-check-input" checked>Active
+        </label>
+        </div>
+        <div class="form-check-inline">
+        <label class="form-check-label">
+        <input type="radio" name="gender" class="form-check-input">In Active
+        </label>
+        </div>
+        </div>
+        </div>
+     
+        </div>
         </form>
-        <div class="col-12">
-            <div class="doctor-submit text-end">
-            <button type="submit" class="btn btn-primary submit-form me-2">Submit</button>
-            <button type="submit" class="btn btn-primary cancel-form">Cancel</button>
-            </div>
-            </div>
-            </div>
-            </form>
+        </div>
+        </div>
+<div class="row">
+<div class="col-lg-12">
+<div class="doctor-personals-grp">
+<div class="card">
+<div class="card-body">
+<div class="tab-content-set">
+<ul class="nav">
+
+<li>
+<a href="staff-setting.html" class="active"><span class="set-about-icon me-2"><img src="assets/img/icons/menu-icon-02.svg" alt></span>Employee Setting</a>
+</li>
+</ul>
+</div>
+<div class="setting-form-blk">
+<form>
+<div class="row">
+<div class="col-12">
+<div class="form-heading">
+<h4>Work Information</h4>
+</div>
+</div>
+<div class="col-12 col-sm-12">
+    <div class="form-group local-forms">
+    <label>Working Hours <span class="login-danger">*</span></label>
+    <select class="form-control select">
+    <option selected>Standard 40 hours/week</option>
+    <option>Standard 30 hours/week</option>
+    </select>
+    </div>
+    </div>
+
+<div class="col-12 col-sm-12">
+<div class="form-group local-forms">
+<label> Work Address <span class="login-danger">*</span></label>
+<textarea class="form-control" rows="3" cols="30">415 Atlanta Shoppers, Vesu Main Road, Vesu, Gujarat 395007</textarea>
+</div>
+</div>
+<div class="col-12 col-sm-12">
+    <div class="form-group local-forms">
+    <label>Work Location </label>
+    <input class="form-control" type="email" value="Surat, Gujarat, India">
+    </div>
+    </div>
+</div>
+<div class="col-12">
+<div class="form-heading">
+<h4>Security Setting</h4>
+</div>
+</div>
+<div class="col-12 col-sm-12">
+<div class="form-group local-forms">
+<label>Current Password </label>
+<input class="form-control" type="password"  value="12345678">
+</div>
+</div>
+<div class="col-12 col-sm-12">
+<div class="form-group local-forms">
+<label>New Password </label>
+<input class="form-control" type="password" placeholder value="12345678">
+</div>
+</div>
+<div class="col-12 col-sm-12">
+<div class="form-group local-forms">
+<label>Confirm Password </label>
+<input class="form-control" type="password" placeholder value="12345678">
+</div>
+</div>
+<div class="col-12 col-sm-12">
+<div class="profile-check-blk form-group">
+<div class="remember-me">
+<label class="custom_check mr-2 mb-0 d-inline-flex remember-me"> Dashboard Visible
+<input type="checkbox" name="radio" checked>
+<span class="checkmark"></span>
+</label>
+</div>
+<div class="remember-me">
+<label class="custom_check mr-2 mb-0 d-inline-flex remember-me"> Inquiry Visible
+<input type="checkbox" name="radio" checked>
+<span class="checkmark"></span>
+</label>
+</div>
+<div class="remember-me">
+<label class="custom_check mr-2 mb-0 d-inline-flex remember-me"> Settings Visible
+<input type="checkbox" name="radio">
+<span class="checkmark"></span>
+</label>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>

@@ -8,11 +8,14 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
-<link rel="stylesheet" type="text/css" href="assets/css/dataTables.bootstrap4.min.css">
 <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
 <link rel="stylesheet" type="text/css" href="assets/css/select2.min.css">
-<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-datetimepicker.min.css">
-<link rel="stylesheet" href="assets/css/feather.css">
+
+<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+
+<link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
+
+<link rel="stylesheet" href="assets/plugins/feather/feather.css">
 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
@@ -163,10 +166,17 @@
 <li><a href="staff-profile.html">Staff Profile</a></li>
 <li><a href="staff-leave.html">Leaves</a></li>
 <li><a href="staff-holiday.html">Holidays</a></li>
-<li><a href="staff-attendance.html">Attendance</a></li>
+<li><a class="active" href="staff-attendance.html">Attendance</a></li>
 </ul>
 </li>
-
+<li class="submenu">
+<a href="#"><span class="menu-side"><img src="assets/img/icons/menu-icon-04.svg" alt></span> <span> Appointments </span> <span class="menu-arrow"></span></a>
+<ul style="display: none;">
+<li><a href="appointments.html">Appointment List</a></li>
+<li><a href="add-appointment.html">Book Appointment</a></li>
+<li><a href="edit-appointment.html">Edit Appointment</a></li>
+</ul>
+</li>
 <li class="submenu">
 <a href="#"><span class="menu-side"><img src="assets/img/icons/menu-icon-05.svg" alt></span> <span> Doctor Schedule </span> <span class="menu-arrow"></span></a>
 <ul style="display: none;">
@@ -253,7 +263,7 @@
 </ul>
 </li>
 <li>
-<a class="active" href="settings.html"><span class="menu-side"><img src="assets/img/icons/menu-icon-16.svg" alt></span> <span>Settings</span></a>
+<a href="settings.html"><span class="menu-side"><img src="assets/img/icons/menu-icon-16.svg" alt></span> <span>Settings</span></a>
 </li>
 <li class="menu-title">UI Elements</li>
 <li class="submenu">
@@ -329,103 +339,325 @@
 </div>
 </div>
 <div class="page-wrapper">
-
-<div class="content container-fluid">
+<div class="content">
 
 <div class="page-header">
 <div class="row">
 <div class="col-sm-12">
 <ul class="breadcrumb">
-<li class="breadcrumb-item"><a href="index-2.html">Dashboard </a></li>
+<li class="breadcrumb-item"><a href="staff-list.html">Staffs </a></li>
 <li class="breadcrumb-item"><i class="feather-chevron-right"></i></li>
-<li class="breadcrumb-item active">Settings</li>
+<li class="breadcrumb-item active">Attandance Sheet</li>
 </ul>
 </div>
 </div>
 </div>
 
-<div class="settings-menu-links">
-<ul class="nav nav-tabs menu-tabs">
-<li class="nav-item ">
-<a class="nav-link" href="settings.html">General Settings</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="localization-details.html">Localization</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="payment-settings.html">Payment Settings</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="email-settings.html">Email Settings</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="social-settings.html">Social Media Login</a>
-</li>
-<li class="nav-item active">
-<a class="nav-link" href="social-links.html">Social Links</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="seo-settings.html">SEO Settings</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="theme-settings.html">Theme Settings</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="change-password.html">Change Password</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="others-settings.html">Others</a>
-</li>
-</ul>
-</div>
 <div class="row">
-<div class="col-lg-6 col-md-12">
-<div class="card">
-<div class="card-header">
-<h5 class="card-title">Social Link Settings</h5>
-</div>
-<div class="card-body pt-0">
+<div class="col-sm-12">
+<div class="card card-table show-entire">
+<div class="card-body">
+
+<div class="page-table-header mb-2">
+<div class="row align-items-center">
+<div class="col">
+<div class="doctor-table-blk">
+<h3>Attandance Sheet</h3>
+<div class="doctor-search-blk">
+<div class="top-nav-search table-search-blk">
 <form>
-<div class="settings-form">
-    <div class="links-info">
-        <div class="row form-row links-cont">
-        <div class="form-group form-placeholder d-flex">
-        <input type="text" class="form-control" placeholder="Enter Tips Here">
-        <a href="#" class="btn trash">
-        <i class="feather-trash-2"></i>
-        </a>
-        </div>
-        </div>
-        </div>
-        <div class="links-info">
-            <div class="row form-row links-cont">
-            <div class="form-group form-placeholder d-flex">
-            <input type="text" class="form-control" placeholder="Enter Tips Here">
-            <a href="#" class="btn trash">
-            <i class="feather-trash-2"></i>
-            </a>
-            </div>
-            </div>
-            </div>
+<input type="text" class="form-control" placeholder="Search here">
+<a class="btn"><img src="assets/img/icons/search-normal.svg" alt></a>
+</form>
 </div>
-<div class="form-group text-end">
-<a href="javascript:void(0);" class="btn add-links">
-<i class="fa fa-plus me-1"></i> Add More
-</a>
+<div class="add-group">
+<a href="javascript:;" class="btn btn-primary add-pluss ms-2"><img src="assets/img/icons/plus.svg" alt></a>
+<a href="javascript:;" class="btn btn-primary doctor-refresh ms-2"><img src="assets/img/icons/re-fresh.svg" alt></a>
 </div>
-<div class="form-group mb-0">
-<div class="settings-btns">
-<button type="submit" class="border-0 btn btn-primary btn-gradient-primary btn-rounded">Submit</button>
-<button type="submit" class="btn btn-secondary btn-rounded">Cancel</button>
+</div>
+</div>
+</div>
+<div class="col-auto text-end float-end ms-auto download-grp">
+<a href="javascript:;" class=" me-2"><img src="assets/img/icons/pdf-icon-01.svg" alt></a>
+<a href="javascript:;" class=" me-2"><img src="assets/img/icons/pdf-icon-02.svg" alt></a>
+<a href="javascript:;" class=" me-2"><img src="assets/img/icons/pdf-icon-03.svg" alt></a>
+<a href="javascript:;"><img src="assets/img/icons/pdf-icon-04.svg" alt></a>
+</div>
+</div>
+</div>
+
+<div class="staff-search-table">
+<form>
+<div class="row">
+<div class="col-12 col-md-6 col-xl-4">
+<div class="form-group local-forms">
+<label>Employee Name </label>
+<input class="form-control" type="text">
+</div>
+</div>
+<div class="col-12 col-md-6 col-xl-4">
+<div class="form-group local-forms">
+<label>Year </label>
+<select class="form-control select">
+<option>Select Year</option>
+<option>2022</option>
+<option>2021</option>
+<option>2020</option>
+<option>2019</option>
+<option>2018</option>
+<option>2017</option>
+</select>
+</div>
+</div>
+<div class="col-12 col-md-6 col-xl-4">
+<div class="form-group local-forms">
+<label>Month </label>
+<select class="form-control select">
+<option>Select Month</option>
+<option>December</option>
+<option>November</option>
+<option>October</option>
+<option>September</option>
+</select>
+</div>
+</div>
+<div class="col-12 col-md-6 col-xl-4">
+<div class="form-group local-forms cal-icon">
+<label>From </label>
+<input class="form-control datetimepicker" type="text">
+</div>
+</div>
+<div class="col-12 col-md-6 col-xl-4">
+<div class="form-group local-forms cal-icon">
+<label>To </label>
+<input class="form-control datetimepicker" type="text">
+</div>
+</div>
+<div class="col-12 col-md-6 col-xl-4">
+<div class="doctor-submit">
+<button type="submit" class="btn btn-primary submit-list-form me-2">Submit</button>
+</div>
 </div>
 </div>
 </form>
 </div>
+<div class="table-responsive">
+<table class="table border-0 custom-table attent-table datatable mb-0">
+<thead>
+<tr>
+<th>September</th>
+<th>01</th>
+<th>02</th>
+<th>03</th>
+<th>04</th>
+<th>05</th>
+<th class="week-days">06</th>
+<th class="week-days">07</th>
+<th>08</th>
+<th>09</th>
+<th>10</th>
+<th>11</th>
+<th>12</th>
+<th class="week-days">13</th>
+<th class="week-days">14</th>
+<th>15</th>
+<th>16</th>
+<th>17</th>
+<th>18</th>
+<th>19</th>
+<th class="week-days">20</th>
+<th class="week-days">21</th>
+<th>22</th>
+<th>23</th>
+<th>24</th>
+<th>25</th>
+<th>26</th>
+<th class="week-days">27</th>
+<th class="week-days">28</th>
+<th>29</th>
+<th>30</th>
+<th>31</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="month-table"><h5>Andrea Lalema</h5></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td></td>
+<td></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td></td>
+<td></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td></td>
+<td></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td></td>
+<td></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+</tr>
+<tr>
+<td class="month-table"><h5>Smith Bruklin</h5></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td></td>
+<td></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td></td>
+<td></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td></td>
+<td></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td></td>
+<td></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+</tr>
+<tr>
+<td class="month-table"><h5>Galaviz Lalema</h5></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td></td>
+<td></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td></td>
+<td></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td></td>
+<td></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td></td>
+<td></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+</tr>
+<tr>
+<td class="month-table"><h5>Mark Hay Smith</h5></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td></td>
+<td></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td></td>
+<td></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td></td>
+<td></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td></td>
+<td></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+</tr>
+<tr>
+<td class="month-table"><h5>Cristina Groves</h5></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td></td>
+<td></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td></td>
+<td></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td></td>
+<td></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="present-table attent-status"><i class="feather-check"></i></span></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td></td>
+<td></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+<td><span class="absent-table attent-status"><i class="feather-x"></i></span></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
 </div>
-
+</div>
+</div>
 <div class="notification-box">
 <div class="msg-sidebar notifications msg-noti">
 <div class="topnav-dropdown-header">
@@ -636,19 +868,31 @@
 </div>
 </div>
 </div>
+<div id="delete_patient" class="modal fade delete-modal" role="dialog">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-body text-center">
+<img src="assets/img/sent.png" alt width="50" height="46">
+<h3>Are you sure want to delete this ?</h3>
+<div class="m-t-20"> <a href="#" class="btn btn-white" data-bs-dismiss="modal">Close</a>
+<button type="submit" class="btn btn-danger">Delete</button>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="sidebar-overlay" data-reff></div>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script src="assets/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/jquery.slimscroll.js"></script>
 <script src="assets/js/feather.min.js"></script>
-<script src="assets/js/jquery.dataTables.min.js"></script>
-<script src="assets/js/dataTables.bootstrap4.min.js"></script>
-
+<script src="assets/js/jquery.slimscroll.js"></script>
 <script src="assets/js/select2.min.js"></script>
+<script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="assets/plugins/datatables/datatables.min.js"></script>
 
-<script src="assets/js/moment.min.js"></script>
+<script src="assets/plugins/moment/moment.min.js"></script>
 <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
 <script src="assets/js/app.js"></script>
 </body>
-</html> 
+</html>

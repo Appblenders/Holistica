@@ -57,8 +57,7 @@ $(document).on("click",".add-links1",function(){var experiencecontent='<div clas
 '</td>'+
 '</tr>';$(".add-table-items").append(experiencecontent);return false;});$(document).on("click",".add-links",function(){var experiencecontent='<div class="links-info"><div class="row form-row links-cont">'+
 '<div class="form-group form-placeholder d-flex">'+
-'<button class="btn social-icon"><i class="feather-github"></i></button>'+
-'<input type="text" class="form-control" placeholder="Social Link">'+
+'<input type="text" class="form-control" placeholder="Enter Tips Here">'+
 '<a href="#" class="btn trash">'+
 '<i class="feather-trash-2"></i>'+
 '</a>'+
